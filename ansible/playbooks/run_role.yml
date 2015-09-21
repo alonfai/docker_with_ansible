@@ -1,0 +1,11 @@
+---
+- name: Run a single role and do a yum clean
+  hosts: localhost
+  connection: local
+
+  roles:
+    - "{{ role }}"
+
+  post_tasks:
+    - name: Clean up yum to reduce size of docker image
+      command: /usr/bin/yum clean all
