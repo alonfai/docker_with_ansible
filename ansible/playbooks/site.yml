@@ -1,7 +1,8 @@
 ---
 - name: Install WordPress, MySQL, Nginx, and PHP-FPM
-  hosts: wordpress-server
-  remote_user: root
+  hosts: localhost
+  connection: local
+  gather_facts: yes
   # remote_user: user
   # sudo: yes
 
