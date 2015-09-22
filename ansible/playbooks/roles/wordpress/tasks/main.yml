@@ -3,6 +3,7 @@
   get_url: url=http://wordpress.org/wordpress-{{ wp_version }}.tar.gz dest=/srv/wordpress-{{ wp_version }}.tar.gz
            sha256sum="{{ wp_sha256sum }}"
 
+
 - name: Install tar to extract archive
   yum: name=tar state=latest
 
